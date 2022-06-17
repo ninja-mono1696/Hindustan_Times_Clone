@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 1250px;
+        height: 2000px;
+        margin: auto;
+        display: flex;
+      }
+      #leftbox {
+        width: 20%;
+        height: 850px;
+      }
+      #leftbox1 {
+        height: 930px;
+        padding: 5px;
+      }
+      #leftbox1:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #leftbox2 {
+        height: 770px;
+      }
+      #leftbox2:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #leftbox3 {
+        height: 800px;
+        padding: 5px;
+      }
+      #leftbox3:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #midbox {
+        width: 50%;
+        height: 2000px;
+        margin-left: 25px;
+      }
+      #rightbox {
+        width: 30%;
+        height: 1200px;
+        margin-left: 25px;
+      }
+      span {
+        color: blue;
+      }
+
+      #headings:before,
+      #headings:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 11%;
+        vertical-align: middle;
+      }
+      #headings {
+        font-family: garamond;
+        font-weight: 600;
+        margin-top: 26px;
+      }
+      h3 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: 630;
+        margin: 8px;
+        padding-top: 5px;
+      }
+      h3:hover {
+        cursor: pointer;
+      }
+      p {
+        color: grey;
+        margin: 9px;
+        padding-top: 7px;
+      }
+      #midheadings:before,
+      #midheadings:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 30.4%;
+        vertical-align: middle;
+      }
+      #midheadings {
+        font-family: garamond;
+        font-weight: 600;
+      }
+      #share {
+        width: 30px;
+        position: relative;
+        left: 450px;
+        bottom: 30px;
+      }
+      #bookmark {
+        width: 30px;
+        position: relative;
+        left: 460px;
+        bottom: 30px;
+      }
+      #modibox {
+        padding: 8px;
+        width: 550px;
+      }
+      #modibox:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+      }
+      #share1 {
+        width: 30px;
+        position: relative;
+        left: 320px;
+        bottom: 115px;
+      }
+      #bookmark1 {
+        width: 30px;
+        position: relative;
+        left: 330px;
+        bottom: 115px;
+      }
+      #secondmodi1 {
+        position: relative;
+        left: 330px;
+        bottom: 120px;
+        border-radius: 4px;
+      }
+      #secondmodi {
+        height: 160px;
+        padding-top: 10px;
+      }
+      #secondmodi:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+      }
+      #citreon {
+        position: relative;
+        left: 365px;
+        bottom: 100px;
+        border-radius: 4px;
+      }
+      #adbox {
+        width: 357px;
+        height: 357px;
+        background-color: rgb(210, 209, 209);
+      }
+      #midadbox {
+        width: 570px;
+        height: 357px;
+        background-color: rgb(210, 209, 209);
+      }
+      #rightboximage:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #rightheadings:before,
+      #rightheadings:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 38.4%;
+        vertical-align: middle;
+      }
+      #rightheadings2:before,
+      #rightheadings2:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 33.4%;
+        vertical-align: middle;
+      }
+      #rightheadings3:before,
+      #rightheadings3:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 30.4%;
+        vertical-align: middle;
+      }
+      #rightheadings4:before,
+      #rightheadings4:after {
+        background-color: rgb(162, 161, 161);
+        content: "";
+        display: inline-block;
+        height: 0.5px;
+        width: 35.4%;
+        vertical-align: middle;
+      }
+      #rightboximage {
+        height: 950px;
+        padding: 5px;
+      }
+      #rightboximage3 {
+        height: 1040px;
+        padding: 5px;
+      }
+      #rightboximage4 {
+        height: 1020px;
+        padding: 5px;
+      }
+      #rightboximage4:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+      }
+      #rightboximage3:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+      }
+      #rightimage1 {
+        width: 355px;
+        border-radius: 7px;
+      }
+      #rightimage2 {
+        width: 108px;
+        position: relative;
+        left: 240px;
+        bottom: 80px;
+        border-radius: 7px;
+      }
+      button {
+        margin-left: 135px;
+        border: none;
+        background-color: white;
+        color: teal;
+        padding: 10px;
+        font-size: large;
+        font-weight: 600;
+      }
+      button:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #leftboxbutton {
+        margin-top: 5px;
+        margin-left: 50px;
+        border: none;
+        background-color: white;
+        color: teal;
+        padding: 10px;
+        font-size: large;
+        font-weight: 600;
+      }
+      #shoptags {
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 400px;
+        padding-top: 20px;
+      }
+      #bestdeals:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+      #electronics:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+      #fashion:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+      #beauty:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="leftbox">
+        <div id="leftbox1">
+          <h3 id="headings"><span>[</span> LATEST NEWS <span>]</span></h3>
+          <h3>
+            Congress's Deepender Hooda shares video of his 'sealed' house: 'Is
+            it crime to...'
+          </h3>
+          <p>Published on Jun 15, 12:44 PM IST</p>
+          <hr />
+          <h3>What is 5G?</h3>
+          <p>Published on Jun 15, 12:42 PM IST</p>
+          <hr />
+          <h3>
+            Harsh Goenka shares Elon Musk's old interview, video may leave you
+            motivated
+          </h3>
+          <p>Published on Jun 15, 12:35 PM IST</p>
+          <hr />
+          <h3>
+            Amber Heard says she did 'horrible things' while she was married to
+            Johnny Depp
+          </h3>
+          <p>Updated on Jun 15, 12:38 PM IST</p>
+          <hr />
+          <h3>
+            Jay Bhanushalis asys he gave '2000 auditions' before bagging his
+            debut role
+          </h3>
+          <p>Published on Jun 15, 12:31 PM IST</p>
+          <hr />
+          <button id="leftboxbutton">View All ></button>
+        </div>
+        <div id="leftbox3">
+          <h3 id="headings"><span>[</span>RECOMMENDED FOR YOU<span>]</span></h3>
+          <h3>
+            PM Modi praises ties with Iran after meeting FM Hossein amid Prophet
+            insult row
+          </h3>
+          <p>Updated on Jun 08, 2022 09:55 PM IST</p>
+          <h3>
+            Hyderabad cops get 3-day custody of prime suspect in minor's gang
+            rape case
+          </h3>
+          <p>Published on Jun 08, 2022 08:17 PM IST</p>
+          <h3>Twitter to provide Musk with raw daily tweet data: Reports</h3>
+          <p>Published on Jun 00, 2022 06:00 AM IST</p>
+          <h3>
+            BJP cautions amid Prophet insult outcry - report: 'Don't insult any
+            religion'
+          </h3>
+          <p>Published on Jun 00, 2022 11:11 AM IST</p>
+          <button id="leftboxbutton">View All ></button>
+        </div>
+      </div>
+      <div id="midbox">
+        <h1 id="midheadings"><span>[</span>TOP NEWS<span>]</span></h1>
+        <div id="modibox">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h1 style="font-size: x-large">
+            Centre clears 5G spectrum auction for 10x faster services, to be
+            held by July
+          </h1>
+          <img
+            style="border-radius: 7px"
+            src="https://images.hindustantimes.com/img/2022/06/15/550x309/07c09048-e68a-11ec-ae4d-ec7dbf68713d_1655270816182_1655270827461.jpg"
+            alt="error"
+          />
+          <p>Published on Jun 15, 2022 10:58AM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h3 style="width: 380px">
+            Day 3 of Rahul Gandhi questioning by ED and huge protests by
+            Congress| Video
+          </h3>
+          <p>Published on Jun 15, 2022 10:58AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/PTI06-15-2022-000022A-0_1655274039218_1655274062591.jpg"
+            alt="error"
+          />
+        </div>
+
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h3 style="width: 380px">
+            Covaxin booster shot enhances efficacy against Delta, Omicron
+            variants: Study
+          </h3>
+          <p>Published on Jun 15, 2022 11:59AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/150x84/445b069c-ec74-11ec-816d-25a8f4149995_1655274549915.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h3 style="width: 380px">
+            'Are we terrorists?' Congress leader amid protests on Rhul Gandhi's
+            ED summons
+          </h3>
+          <p>Published on Jun 15, 2022 12:44 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/PTI06-15-2022-000026A-0_1655275475785_1655275505536.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">WORLD NEWS</h3>
+          <h3 style="width: 380px">
+            'This is how you die': US man recalls being swallowed ny humpback
+            whale
+          </h3>
+          <p>Published on Jun 15, 2022 12:11 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/AFP_9BX2L6_1623489835537_1655275114928.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="width: 380px">
+            Citreon C3 first-frive review: French blossom with spunk, crafted
+            for the young
+          </h3>
+          <p>Published on Jun 15, 2022 12:02 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+
+          <img
+            id="citreon"
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/Citroen_C3_7_1655190616474_1655274737816_1655274741272.JPG"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h3 style="width: 380px">
+            Amit MIshra's 'low-on-fuel plane with faulty engine' tweet on Hardik
+            goes viral
+          </h3>
+          <p>Published on Jun 15, 2022 11:40 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/India-South-Africa-Cricket-27_1655261848592_1655261862019.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">TV</h3>
+          <h3 style="width: 380px">
+            Case filed against Kaaranvir Bohra after woman accuses him of fraud
+          </h3>
+          <p>Published on Jun 15, 2022 12:03 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/kv_1655272988882_1655272996645.png"
+            alt="error"
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 id="midheadings"><span>[</span>DON'T MISS<span>]</span></h1>
+        <div id="modibox">
+          <h3 style="color: teal; font-weight: bold">BOLLYWOOD</h3>
+          <h1 style="font-size: x-large">
+            Kiara Advani on dating Sidharth Malhotra: 'Wherebis this coming
+            from?'
+          </h1>
+          <img
+            style="border-radius: 7px"
+            src="https://images.hindustantimes.com/img/2022/06/17/550x309/sidharth-kiara_1651628287653_1655439840302.jpg"
+            alt="error"
+          />
+          <p>Published on Jun 15, 2022 10:58AM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">TAMIL CINEMA</h3>
+          <h3 style="width: 380px">
+            Veetla Vishesham review: Badaai Ho's Tamil remake hits all the right
+            notes
+          </h3>
+          <p>Published on Jun 17, 2022 01:44PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/Veetla_Vishesham1_1655452307545_1655452325861.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h3 style="width: 380px">
+            Prithvi Shaw's contrasting Instagram stories after India snub and
+            Jaiswal koncks
+          </h3>
+          <p>Updated on Jun 17, 2022 11:46AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/PTI04-20-2022-000247B-0_1655438185858_1655438214926.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">FOOTBALL</h3>
+          <h3 style="width: 380px">
+            Fans go berserk as Tottenham share special post after Chhetri equals
+            huge record
+          </h3>
+          <p>Published on Jun 17, 2022 12:48PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/ANI-20220608360-0_1655449751858_1655449769269.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">HEALTH</h3>
+          <h3 style="width: 380px">
+            Monsoon Ayurveda: Simple and effective health tips during rainy
+            season
+          </h3>
+          <p>Published on Jun 17, 2022 01:48PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/monsoon_ayurveda_thumb_1655451716556_1655451728451.jpg"
+            alt="error"
+          />
+        </div>
+        <button
+          style="
+            padding: 10px 45px 10px 45px;
+            background-color: teal;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin-left: 180px;
+            margin-top: 30px;
+          "
+        >
+          VIEW ALL
+        </button>
+
+        <div id="modibox">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h1 style="font-size: x-large">
+            'Not a lot of credit goes to him': Gavaskar bowled over by Indian
+            cricketer
+          </h1>
+          <img
+            style="border-radius: 7px"
+            src="https://images.hindustantimes.com/img/2022/06/17/550x309/India-South-Africa-Cricket-43_1655449462409_1655449475443.jpg"
+            alt="error"
+          />
+          <p>Published on Jun 17, 2022 12:40AM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h3 style="width: 380px">
+            'Hardik Pandya is the best captain I've played under'
+          </h3>
+          <p>Published on Jun 25, 2022 11:30 AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/ANI-20220608335-0_1655445506702_1655445519781.jpg"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h3 style="width: 380px">
+            'His spot will be up for grabs when kohli, Suryakumar return'
+          </h3>
+          <p>Updated on Jun 17, 2022 08:50 AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/16/148x111/iyer-pant-kishan_1655299036439_1655413844074.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">CRICKET</h3>
+          <h3 style="width: 380px">
+            'Very few wicketkeepers can do what Dinesh Karthik does'
+          </h3>
+          <p>Published on Jun 17, 2022 09:48 AM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/PTI06-12-2022-000157B-0_1655438861755_1655438907031.jpg"
+          />
+        </div>
+        <button
+          style="
+            padding: 10px 45px 10px 45px;
+            background-color: teal;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin-left: 180px;
+            margin-top: 30px;
+          "
+        >
+          VIEW ALL
+        </button>
+        <br />
+        <br />
+        <br />
+        <div id="midadbox">
+          <p style="padding-left: 220px">Advertisement</p>
+        </div>
+        <br />
+        <br />
+        <div id="modibox">
+          <h1 id="midheadings"><span>[</span>TRENDING<span>]</span></h1>
+          <h3 style="color: teal; font-weight: bold">TRENDING</h3>
+          <h1 style="font-size: x-large">
+            Video shows how differently this cat and dog friends approach each
+            other
+          </h1>
+          <img
+            style="border-radius: 7px"
+            src="https://images.hindustantimes.com/img/2022/06/17/550x309/cat_dog_video_viral_Instagram_1655455653516_1655455663315.PNG"
+            alt="error"
+          />
+          <p>Published on Jun 17, 2022 02:29PM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">TRENDING</h3>
+          <h3 style="width: 380px">
+            Twitter flooded with reactions as Delhi witnessed downpour
+          </h3>
+          <p>Published on Jun 17, 2022 12:55 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/Delhi-rains-twitter_1655448919267_1655448934950.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">TRENDING</h3>
+          <h3 style="width: 380px">
+            Flight attendant proposes to her pilot girlfriend in special
+            Pride-themed plane
+          </h3>
+          <p>Published on Jun 17, 2022 12:55 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/Pilot_Flight_Attendant_YouTube_Price_Video_Viral_1655448289579_1655448297181.PNG"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">TRENDING</h3>
+          <h3 style="width: 380px">
+            Dog falls asleep on woman's back while she is doing yoga. Watch cute
+            video
+          </h3>
+          <p>Published on Jun 17, 2022 12:27 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/17/148x111/Dog_falls_asleep_on_woman%E2%80%99s_back_while_she_is_doing_yoga_1655448901592_1655448918431.jpg"
+          />
+        </div>
+        <button
+          style="
+            padding: 10px 45px 10px 45px;
+            background-color: teal;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin-left: 180px;
+            margin-top: 30px;
+          "
+        >
+          VIEW ALL
+        </button>
+        <br />
+        <br />
+        <br />
+        <div id="midadbox">
+          <p style="padding-left: 220px">Advertisement</p>
+        </div>
+        <br />
+        <br />
+        <div id="modibox">
+          <h1 id="midheadings"><span>[</span>RECOMMENDED<span>]</span></h1>
+          <h3 style="color: teal; font-weight: bold">CITIES</h3>
+          <h1 style="font-size: x-large">
+            Class 1 student tied with rope by mother, left on terrace for not
+            doing homework
+          </h1>
+          <img
+            style="border-radius: 7px"
+            src="https://images.hindustantimes.com/img/2022/06/08/550x309/e45c5226-e743-11ec-81b3-e8e05a65fdbf_1654704079581.jpg"
+            alt="error"
+          />
+          <p>Published on Jun 08, 2022 09:31PM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h3 style="width: 380px">
+            Lawrence Bishnoi planned murder of Moosewala: Delhi police
+          </h3>
+          <p>Published on Jun 09, 2022 12:09 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/08/150x84/c1e174f4-e759-11ec-8e42-ddb1bac7707a_1654713560475.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">ENTERTAINMENT</h3>
+          <h3 style="width: 380px">
+            Mailaika Arora recalls son Arhaan Khan 'was howling on phone' after
+            her road accident: 'He was worried and in shock'
+          </h3>
+          <p>Published on Jun 08, 2022 10:42 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/08/150x84/malaikaarora11629180903_1652779822258_1654706309496.webp"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">VIDEOS</h3>
+          <h3 style="width: 380px">
+            Delhi cop beaten by two including woman after faceoff over bike
+            challan | Watch
+          </h3>
+          <p>Published on Jun 08, 2022 10:42 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/08/150x84/HT_Normal_Thumbnail_-_AUG__2021_-_2022-06-08T204915.660_1654701824285_1654701833926.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="color: teal; font-weight: bold">INDIA NEWS</h3>
+          <h3 style="width: 380px">
+            Salman khan threat case : Gangster Lawrence Bishnoi blames former
+            associates
+          </h3>
+          <p>Published on Jun 08, 2022 08:22 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            id="secondmodi1"
+            src="https://images.hindustantimes.com/img/2022/06/08/150x84/da42e200-e739-11ec-81b3-e8e05a65fdbf_1654699939205.jpg"
+          />
+        </div>
+
+        <button
+          style="
+            padding: 10px 45px 10px 45px;
+            background-color: teal;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin-left: 180px;
+            margin-top: 30px;
+          "
+        >
+          VIEW ALL
+        </button>
+        <br />
+        <br />
+        <br />
+        <div id="midadbox">
+          <p style="padding-left: 220px">Advertisement</p>
+        </div>
+        <br />
+        <br />
+        <h1 style="color: teal; position: relative; top: 50px">WEBSTORIES</h1>
+        <h3 style="position: relative; left: 400px; bottom: 10px">VIEW ALL</h3>
+        <p style="position: relative; left: 520px; bottom: 45px">&#60; &#62;</p>
+        <div style="display: flex">
+          <div>
+            <img
+              style="
+                width: 200px;
+                margin-right: 5px;
+                cursor: pointer;
+                border-radius: 7px;
+              "
+              src="https://images1.livehindustan.com/uploadimage/library/2022/06/17/4_3/9_16_2/tips_to_take_care_of_eyes_in_summer_1655449198.jpeg"
+            />
+          </div>
+          <div>
+            <img
+              style="
+                width: 200px;
+                margin-right: 5px;
+                cursor: pointer;
+                border-radius: 7px;
+              "
+              src="https://images1.livehindustan.com/uploadimage/library/2022/06/17/4_3/9_16_2/benefits_of_mint_for_skin_and_hair_1655444222.jpeg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              style="
+                width: 200px;
+                margin-right: 5px;
+                cursor: pointer;
+                border-radius: 7px;
+              "
+              src="https://images1.livehindustan.com/uploadimage/library/2022/06/16/4_3/9_16_2/hailey_bieber_s_cool_summer_outfits_1655379512.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div id="midadbox">
+          <p style="padding-left: 220px">Advertisement</p>
+        </div>
+        <br />
+        <br />
+        <div id="modibox">
+          <h1 id="midheadings"><span>[</span>OTT PLAY<span>]</span></h1>
+          <h1 style="font-size: x-large">
+            HIT - The First CAse teaser: Rajkummar Rao, Sanya Malhotra's twisted
+            crime-thriller seems promising
+          </h1>
+          <img
+            style="border-radius: 7px; width: 550px"
+            src="https://images.ottplay.com/images/hit-296.jpeg"
+            alt="error"
+          />
+          <p>Published on Jun 17, 2022 01:52 PM IST</p>
+          <img
+            id="share"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="width: 380px">
+            Meet the doppelganger of Game of Thrones ' Tyrion Lannister from
+            Kashmir
+          </h3>
+          <p>Published on Jun 17, 2022 01:45 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            style="
+              width: 170px;
+              position: relative;
+              left: 350px;
+              bottom: 100px;
+              border-radius: 7px;
+            "
+            src="https://images.ottplay.com/images/tariq-mir-799.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="width: 380px">
+            Latest Tamil movies, series streaming on OTT in 2022 - Netflix.
+            Prime Video, ZEE5, Hotstar, SonyLiv and aha
+          </h3>
+          <p>Published on Jun 17, 2022 01:19 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            style="
+              width: 170px;
+              position: relative;
+              left: 350px;
+              bottom: 110px;
+              border-radius: 7px;
+            "
+            src="https://images.ottplay.com/images/latest-tamil-ott-releases-809.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="width: 380px">
+            Alia Bhatt shares selfie after 'another great day' at set of Heart
+            of Stone; also expresses gratitude for response to Brahmastra
+            trailer
+          </h3>
+          <p>Published on Jun 17, 2022 01:02 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            style="
+              width: 170px;
+              position: relative;
+              left: 350px;
+              bottom: 110px;
+              border-radius: 7px;
+            "
+            src="https://images.ottplay.com/images/ab-782.jpg"
+          />
+        </div>
+        <div id="secondmodi">
+          <h3 style="width: 380px">
+            Bhool Bhulaiyaa 2 on Netflix: Kartik Aaryan, Kiara Advani and Tabu
+            starrer to arrive on OTT on THIS date
+          </h3>
+          <p>Published on Jun 17, 2022 01:02 PM IST</p>
+          <img
+            id="share1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjW9U4VceErj7S76msNUAkXZHBU7EHuFiDg&usqp=CAU"
+            alt="error"
+          />
+          <img
+            id="bookmark1"
+            src="https://www.pxpng.com/public/uploads/preview/-11608565643y2ec8jdhc7.png"
+            alt="error"
+          />
+          <img
+            style="
+              width: 170px;
+              position: relative;
+              left: 350px;
+              bottom: 110px;
+              border-radius: 7px;
+            "
+            src="https://images.ottplay.com/images/bb2ka-617.jpeg"
+          />
+        </div>
+        <button
+          style="
+            padding: 10px 45px 10px 45px;
+            background-color: teal;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin-left: 220px;
+            margin-top: 30px;
+          "
+        >
+          VIEW ALL
+        </button>
+        <br />
+        <br />
+        <br />
+        <div id="midadbox">
+          <p style="padding-left: 220px">Advertisement</p>
+        </div>
+      </div>
+      <div id="rightbox">
+        <div id="adbox">
+          <p style="padding-left: 120px">Advertisement</p>
+        </div>
+        <br />
+        <div id="rightboximage">
+          <h3 id="rightheadings"><span>[</span>IN PICS<span>]</span></h3>
+          <h3>Many benefits of exercise for your brain</h3>
+          <img
+            id="rightimage1"
+            src="https://images.hindustantimes.com/img/2022/06/14/550x309/exercise_thumb_1655220811929_1655220822001.jpg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 265px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 17px;
+            "
+          >
+            Incredible health benefits of moringa or drumstick as per Ayurveda
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/drumstick_1_1655219312836_1655219348378.jpg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 220px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            Kajal Aggarwal is perfect off-duty fashion inspo in relaxed fit
+            shirt, jeans
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/Kajal_Aggarwal_wearing_Payal_Khandwala_(1)_1655201560043_1655201647292.jpeg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 236px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            Bhumi Padnekar's summer outfit has a historical twist
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/BeFunky-collage_(20)_1655201447009_1655201478874.jpg"
+            alt="error"
+          />
+          <h3 style="width: 237px; font-size: medium; margin-top: 0">
+            When in Abu Dhabi, deck up like Hina Khan
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/BeFunky-collage_(13)_1655196871186_1655196885299.jpg"
+            alt="error"
+          />
+          <hr />
+          <button>View All ></button>
+        </div>
+        <br />
+        <div id="adbox">
+          <p style="padding-left: 120px">Advertisement</p>
+        </div>
+        <br />
+        <div id="rightimage">
+          <h3 id="rightheadings2"><span>[</span>SHOP NOW<span>]</span></h3>
+          <br />
+          <div id="shoptags">
+            <div id="bestdeals">Best Deals</div>
+            <div id="electronics">Electronics</div>
+            <div id="fashion">Fashion</div>
+            <div id="beauty">Beauty</div>
+          </div>
+        </div>
+        <br />
+        <div id="adbox">
+          <p style="padding-left: 120px">Advertisement</p>
+        </div>
+        <br />
+        <div id="rightboximage3">
+          <h3 id="rightheadings3"><span>[</span>MUST WATCH<span>]</span></h3>
+          <h3>
+            Mamata meets Sharad Pawar in Delhi after he refuses to run for
+            President
+          </h3>
+          <img
+            id="rightimage1"
+            src="https://images.hindustantimes.com/img/2022/06/14/550x309/HT_Normal_Thumbnail_-_AUG__2021_1655218465862_1655218476881.jpg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 265px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 17px;
+            "
+          >
+            Putin accused of using banned cluster bombs; Amnesty claims proof of
+            war crimes
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/1920x1080_THUMBNAILjkgjgj_(21)_1655214430879_1655214450902.jpg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 220px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            India to get new Chief of Defend=se Staff; Here's what Rajnath Singh
+            said
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/HT_Normal_Thumbnail_-_AUG__2021_-_2022-06-14T183312.241_1655212210651_1655212223496.jpg"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 236px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            Meme fest erupts on social media as Microsoft's Internet Explorer is
+            retiring
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/HT_Normal_Thumbnail_-_AUG__2021_(8)_1655208942707_1655209001346.jpg"
+            alt="error"
+          />
+          <h3 style="width: 237px; font-size: medium; margin-top: 0">
+            Agnipath: Mega reform for armed forces; For younger, future ready
+            soldiers
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/1920x1080_THUMBNAILjkgjgj_1655208526386_1655208534997.jpg"
+            alt="error"
+          />
+          <hr />
+          <button>View All ></button>
+        </div>
+        <br />
+        <div id="adbox">
+          <p style="padding-left: 120px">Advertisement</p>
+        </div>
+        <br />
+        <div id="rightboximage4">
+          <h3 id="rightheadings4"><span>[</span>ITS VIRAL<span>]</span></h3>
+          <h3>
+            Gentle golden retriever spends time with butterfly. Watch adorable
+            video
+          </h3>
+          <img
+            id="rightimage1"
+            src="https://images.hindustantimes.com/img/2022/06/15/550x309/Gentle_golden_retriever_spends_time_with_butterfly_1655263076020_1655263099993.png"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 265px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 17px;
+            "
+          >
+            Rescued puppy's reaction to having its first bath is heart-warming.
+            Watch
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/15/148x111/Rescued_puppy_reaction_to_having_its_first_birth_1655261398445_1655261431267.png"
+            alt="error"
+          />
+          <h3
+            style="
+              width: 220px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            Dog loves The Lion King so much that his human got him a Simba toy.
+            Watch
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/Dog_loves_The_Lion_King_so_much_that_its_human_got_him_a_Simba_toy_1655218827633_1655218839159.jpg"
+          />
+          <h3
+            style="
+              width: 236px;
+              font-size: medium;
+              margin-bottom: 0;
+              margin-top: 0;
+            "
+          >
+            This 'passenger' in car chased by police faced no charges. Its an
+            aliigator
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/Facebook_Police_Passenger_Alligator_1655217461731_1655217524278.PNG"
+            alt="error"
+          />
+          <h3 style="width: 237px; font-size: medium; margin-top: 0">
+            Golden retriever dog swims in pool with human. Watch its underwater
+            footage
+          </h3>
+          <img
+            id="rightimage2"
+            src="https://images.hindustantimes.com/img/2022/06/14/148x111/cute-dog-video_1655211900990_1655211914015.jpg"
+            alt="error"
+          />
+          <hr />
+          <button>View All ></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
