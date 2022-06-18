@@ -185,6 +185,7 @@
   width: 100%;
   position: fixed;
   z-index: 3;
+  background-color: white;
 }
 /* .headMenu::after{
     content: "";
