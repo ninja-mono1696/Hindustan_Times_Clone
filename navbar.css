@@ -10,15 +10,15 @@
 
 #header {
   animation-delay: 0s;
-  top: 0px;
-  animation: none;
-  position: sticky;
+  top: 0;
+  position: fixed;
+  z-index: 4;
   transition: none;
   width: 100%;
   background-color: rgb(1,30,41);
 }
 .nav {
-    width: 70%;
+    width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,12 +41,16 @@
   width: 40%;
   height: 100%;
   margin: auto;
-  transition: all 0.2s  ease;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 20px;
+}
+.logo h1{
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
 }
 .logo img{
     width: 100%;
+    height: auto;
     aspect-ratio: auto 300 / 38;
 }
 
@@ -74,7 +78,7 @@
   padding: 2px 0;
   color: white;
 }
-.exploreSearch > div:nth-child(1) > button {
+.exploreSearch > div:nth-child(1)  button {
   width: 100px;
   height: auto;
   display: inline-flex;
@@ -83,7 +87,7 @@
   cursor: pointer;
   background-color: rgb(1,30,41);
 }
-svg {
+.exploreSearch > div:nth-child(1) button svg {
   color: white;
   font-weight: 400;
   fill: currentColor;
@@ -91,7 +95,7 @@ svg {
   height: 16px;
   padding: 8px;
 }
-strong{
+.exploreSearch > div:nth-child(1) button strong{
     font-size: 14px;
     color: white;
     font-weight: 400;
@@ -101,7 +105,7 @@ strong{
   width: 60%;
   height: auto;
 }
-form {
+.exploreSearch > div:nth-child(2) form {
   background-color: rgb(1,30,41);
   width: 100%;
   height: 25px;
@@ -109,7 +113,7 @@ form {
   flex-direction: row;
   align-items: center;
 }
-input {
+.exploreSearch > div:nth-child(2) form input {
   all: unset;
   font: 14px system-ui;
   width: 100%;
@@ -117,7 +121,7 @@ input {
   border: 1px solid white;
   border-radius: 10px;
 }
-::placeholder {
+.exploreSearch > div:nth-child(2) form input::placeholder {
   color: white;
   opacity: 0.7;
 }
@@ -134,19 +138,11 @@ input {
 
 .dateTime {
     width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 5px;
+    text-align: center;
   font-size: 14px;
-  min-height: 33px;
+  color: white;
 }
-.dateTime>div:nth-child(2){
-    width: 40%;
-    color: white;
-}
-
-
 
 .second > div:nth-child(1) {
     width: 80%;
@@ -185,12 +181,12 @@ input {
 /* CSS part for second part of header. */
 
 .headMenu {
-  animation: none;
+    /* animation: animationDownN3 0.8s forwards 0s ease-in; */
   width: 100%;
   position: fixed;
-  margin-top: -10px;
+  z-index: 3;
 }
-.headMenu::after{
+/* .headMenu::after{
     content: "";
     position: absolute;
     top: 60px;
@@ -199,30 +195,25 @@ input {
     height: 1px;
     z-index: 1;
     background-color: #f5f5f5;
-}
+} */
 
 .headMenu > div {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 .headMenu > div > ul {
+    width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
 }
-.headMenu > div > ul li a{
-    color: black;
+.headMenu > div > ul:nth-child(1){
+    font-weight: bold;
 }
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+.headMenu > div > ul li a{
+    color: black;
 }
 
 .headMenu > div > ul > li {
@@ -233,53 +224,62 @@ ul {
   height: 20px;
   line-height: 20px;
   text-align: center;
+  font-size: 14px;
 }
 
 .headMenu > div > ul:nth-child(2) {
+    /* animation: animationDownN2 0.8s forwards 0s ease-in; */
+    z-index: 1;
   position: relative;
+  padding: 8px;
+  box-shadow: 0 3px 6px 0 rgb(191 191 191 / 16%);
 }
 .headMenu > div > ul:nth-child(2) > li {
   padding: 5px 5px;
   height: inherit;
   line-height: 20px;
   text-align: center;
+  width: 100px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
 }
 
 .active{
     text-decoration: underline;
+}
+
+.headMenu > div > ul:nth-child(1) a:hover{
     color: rgb(0,177,206);
 }
-.headMenu > div > ul > li a:hover{
-    color: rgb(0,177,206);
+.headMenu > div > ul:nth-child(2) li:hover{
+    background-color: rgb(0,177,206);
 }
 
 .sub{
     display: none;
-    border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .headMenu > div > ul > li:hover .sub{
     display: block;
     position: absolute;
     margin-top: 15px;
-    margin-left: -100px;
+    margin-left: -50px;
 }
 .headMenu > div > ul > li:hover .sub ul{
     display: block;
     margin: 10px;
-    border: 1px solid;
 }
 .headMenu > div > ul > li:hover .sub ul li{
     width: 100px;
     padding: 10px;
-    border: 1px dotted red;
+    border-bottom: 1px dotted black;
     background-color: transparent;
     text-align: left;
 }
 .headMenu > div > ul > li:hover .sub ul li:last-child{
     border: none;
 }
-.headMenu > div > ul > li:hover .sub ul li :hover{
+.headMenu > div > ul > li:hover .sub ul li:hover{
     background-color: rgb(0,177,206);
     border: none;
 }
