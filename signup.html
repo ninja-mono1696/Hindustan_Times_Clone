@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #logo {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+        }
+        
+        #logo img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            padding-top: 10px;
+        }
+        
+        #container {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        #heading {
+            text-align: center;
+            font-weight: bold;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 25px;
+        }
+        
+        #field {
+            width: 450px;
+            height: 750px;
+            background-color: white;
+            margin: auto;
+            padding-top: 40px;
+        }
+        
+        body {
+            background-color: #eeeeee;
+            font-family: "Lato", sans-serif;
+        }
+        
+        .emi {
+            /* padding-right: 10px; */
+            padding-bottom: 8px;
+            padding-left: 30px;
+        }
+        
+        .emii {}
+        
+        .f2 a {
+            padding-left: 10px;
+        }
+        
+        .emi3 {
+            padding-bottom: 8px;
+            padding-right: 10px;
+        }
+        
+        .f3 a {
+            padding-right: 20px;
+        }
+        
+        .f1 {
+            border: 1px solid rgb(208, 208, 208);
+            width: 390px;
+            height: 25px;
+            margin: auto;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        
+        .f2 {
+            border: 1px solid black;
+            width: 400px;
+            height: 25px;
+            background-color: #1877f2;
+            color: white;
+            margin: auto;
+            margin-top: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        
+        .f3 {
+            border: 1px solid black;
+            width: 400px;
+            height: 25px;
+            background-color: black;
+            color: white;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        
+        .or {
+            position: relative;
+            text-align: center;
+            font-size: 16px;
+            background: #fff;
+            padding: 0 10px;
+            font-weight: 700;
+            color: #757575;
+            margin: 5px 0 20px;
+            padding-top: 10px;
+        }
+        
+        hr {
+            width: 400px;
+            margin: auto;
+        }
+        
+        #email {
+            width: 400px;
+            height: 40px;
+        }
+        
+        #password {
+            width: 400px;
+            height: 40px;
+        }
+        
+        .inp {
+            padding-left: 23px;
+        }
+        
+        .inp p {
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        button {
+            margin-left: 160px;
+            width: 130px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            margin-top: 30px;
+            background-color: #56baed;
+            color: white;
+            margin-bottom: 0px;
+        }
+        
+        .pt {
+            text-align: center;
+            font-size: small;
+            margin-top: 80px;
+        }
+        
+        #im {
+            margin-left: 160px;
+            margin-top: 10px;
+        }
+        
+        .ptt {
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+        
+        #imm {
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #first {
+            color: black;
+        }
+        
+        label {
+            font-weight: bold;
+            font-size: 10px;
+        }
+        
+        #log {
+            margin-left: 150px;
+            padding-top: 10px;
+        }
+        
+        #log a {
+            color: #1877f2;
+            font-weight: bold;
+        }
+        
+        #log a:hover {
+            color: red;
+        }
+        
+        #xyz {
+            height: 20px;
+            margin-left: 25px;
+        }
+        
+        #ce {
+            margin-left: 25px;
+        }
+        
+        #left {
+            display: flex;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo"> <img src="https://images.livemint.com/sso/newLogos/prod/ht_logo.svg?v2" alt="error"> </div>
+    <div id="container">
+        <div id="heading"> Login or Register </div>
+        <div id="field">
+
+            <div class="f1">
+                <img class="emii" src="https://www.freepnglogos.com/uploads/new-google-logo-transparent--14.png
+                " alt="error">
+                <a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?scope=email%20profile&include_granted_scopes=true&response_type=token&state=state_parameter_passthrough_value&redirect_uri=https%3A%2F%2Faccounts.hindustantimes.com%2Fgoogle_oauth&client_id=59036276639-9ufea2catbasbmb6mmjn7kdsgpma6edn.apps.googleusercontent.com&flowName=GeneralOAuthFlow"
+                    id="first">  Sign in with Google </a>
+            </div>
+            <div class="f2">
+                <img class="emi" src="https://accounts.hindustantimes.com/images/icfb.svg" alt="error">
+                <a href="">  Sign in with Facebook  </a>
+            </div>
+            <div class="f3">
+                <img class="emi3" src="https://images.livemint.com/sso/appleid_iconlogo.png
+                " alt="error">
+                <a href="">  Sign with Apple </a>
+            </div>
+
+            <div class="or">
+                <span>--------------------------------- OR ----------------------------------</span>
+
+
+            </div>
+            <form>
+                <div class="inp">
+                    <p>Email Id</p>
+                    <input id="email" type="text" required>
+                    <p> Enter Your Password </p>
+                    <input id="password" type="password" required>
+
+                </div>
+                <div id="left">
+                    <input id="xyz" type="checkbox" onclick="myFunction()">
+                    <p id="ce"> Show Password </p>
+                </div>
+                <button> Signup </button>
+                <div id="log">
+                    <label> Already have account </label>
+                    <a href="login2.html"> Login</a> </div>
+            </form>
+            <div class="pt">
+                <p> Powered by</p>
+            </div>
+            <div id="im">
+                <img src="https://images.livemint.com/img/static/ht-digital-logo.svg" alt="">
+            </div>
+            <div class="ptt">
+                <p>One network.One account</p>
+            </div>
+            <div id="imm">
+                <img src="https://images.livemint.com/dev/LHNewFooterLogoDesk.svg" alt="">
+            </div>
+
+        </div>
+        <!--field end-->
+
+    </div>
+    <!--container end-->
+
+</body>
+
+<script>
+    let form = document.querySelector("form");
+    let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let data = {
+            email: form.email.value,
+            password: form.password.value,
+        }
+
+        userData.push(data);
+        localStorage.setItem("userData", JSON.stringify(userData));
+        alert("Signup Successfully");
+        window.location.href = "login2.html";
+
+
+    });
+
+    //   check-box-for-password
+
+
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+</html>
