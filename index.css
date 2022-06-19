@@ -414,14 +414,14 @@
     #secondmodi1 {
       position: relative;
       width: 25%;
-      bottom: 125px;
+      bottom: 80px;
       left: 67%;
       border-radius: 4px;
     }
   
     #secondmodi {
       width: 100%;
-      padding-top: 10px;
+      padding: 10px;
     }
   
     #secondmodi:hover {
