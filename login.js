@@ -9,6 +9,7 @@ form.addEventListener("submit", function(ev) {
     userData.forEach(function(el) {
         if (Email == el.email && pass == el.password) {
             alert("loggin successfull");
+            window.location.href = "";
             flag = true;
         }
     })
