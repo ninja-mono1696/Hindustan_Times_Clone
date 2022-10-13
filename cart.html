@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <!-- Dont change order of columns -->
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Append your output here -->
+
+            </tbody>
+        </table>
+        <div id="total">
+            <p></p>
+            <div>
+                <input type="text" id="coupon" name="coupon" placeholder="Apply Promo"/>
+                <button>
+                    Apply
+                </button>
+            </div>
+            
+            <button>
+                <a href="payment.html">Pay Now</a> 
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let cartArr = JSON.parse(localStorage.getItem("cart-page"))
+    let bag = 0;
+    displayCart(cartArr)
+
+    function displayCart(cartArr) {
+        // document.querySelector("tbody").innerHTML = "";
+        cartArr.forEach(function (el, index) {
+            let tr = document.createElement("tr");
+
+            let td1 = document.createElement("td");
+            td1.setAttribute("class", "flex_img");
+            let img = document.createElement("img");
+            let p = document.createElement("p");
+            img.setAttribute("src", el.image_url)
+            p.innerText = el.name;
+            td1.append(img, p)
+
+            let td2 = document.createElement("td");
+            let div = document.createElement("div");
+            let but1 = document.createElement("button");
+            but1.innerText = "+"
+            but1.addEventListener("click", function () {
+                quantUp(el)
+            })
+            let but2 = document.createElement("button");
+            but2.innerText = "-"
+            but2.addEventListener("click", function () {
+                quantDown(el)
+            })
+            let p2 = document.createElement("p")
+            p2.innerText = el.count;
+            div.append(but1, p2, but2)
+            td2.append(div)
+
+            let td3 = document.createElement("td");
+            td3.innerText = "₹" + (el.price * el.count);
+
+            bag += (el.price * el.count)
+
+            let td4 = document.createElement("td");
+            // td4.
+            let p3=document.createElement("p");
+            p3.innerText = "X";
+            td4.append(p3)
+            td4.addEventListener("click", function () {
+                deleteData(index)
+            })
+
+            tr.append(td1, td2, td3, td4);
+            document.querySelector("tbody").appendChild(tr);
+
+            document.querySelector("#total>p").innerText = "Total Cart Value ₹" + bag;
+            localStorage.setItem("totalPrice", bag)
+        })
+    }
+
+    function quantUp(el) {
+        cartArr.forEach(elem => {
+            if (elem == el) {
+                elem.count++
+            }
+        })
+        localStorage.setItem("cart-page", JSON.stringify(cartArr))
+        window.location.reload()
+    }
+
+    function quantDown(el) {
+        cartArr.forEach(elem => {
+            if (elem == el) {
+                elem.count--
+            }
+        })
+        localStorage.setItem("cart-page", JSON.stringify(cartArr))
+        window.location.reload()
+    }
+
+    function deleteData(index) {
+        cartArr.splice(index, 1);
+        localStorage.setItem("cart-page", JSON.stringify(cartArr))
+        window.location.reload()
+    }
+
+    document.querySelector("#total>div>button").addEventListener("click",discount);
+
+    function discount(event){
+        let promo = document.querySelector("#total>div>input").value
+        if(promo=="masai30"){
+            let temp = Math.ceil(bag*(70/100))
+            document.querySelector("#total>p").innerText = "Total Cart Value ₹" + temp;
+            localStorage.setItem("totalPrice", temp)
+            alert("Applied Successfully!")
+        }else{
+            alert("Enter A Valid Promo Code")
+        }
+    }
+</script>

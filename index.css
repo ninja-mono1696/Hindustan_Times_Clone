@@ -1,0 +1,767 @@
+/* CSS Part for header */
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    outline: none;
+    text-decoration: none;
+    word-wrap: break-word;
+    font-family: "Lato", sans-serif;
+  }
+  
+  #header {
+    animation-delay: 0s;
+    top: 0;
+    position: fixed;
+    z-index: 4;
+    transition: none;
+    width: 100%;
+    background-color: rgb(1, 30, 41);
+  }
+  .nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    min-height: 80px;
+    box-sizing: border-box;
+  }
+  
+  .first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    width: 30%;
+    font-size: 14px;
+  }
+  
+  .logo {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  .logo h1 {
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+  }
+  .logo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto 300 / 38;
+  }
+  
+  .second {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .exploreSearch {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  .exploreSearch > div:nth-child(1) {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    padding: 2px 0;
+    color: white;
+  }
+  .exploreSearch > div:nth-child(1) button {
+    width: 100px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(1, 30, 41);
+  }
+  .exploreSearch > div:nth-child(1) button svg {
+    color: white;
+    font-weight: 400;
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+  }
+  .exploreSearch > div:nth-child(1) button strong {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .exploreSearch > div:nth-child(2) {
+    width: 60%;
+    height: auto;
+  }
+  .exploreSearch > div:nth-child(2) form {
+    background-color: rgb(1, 30, 41);
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .exploreSearch > div:nth-child(2) form input {
+    all: unset;
+    font: 14px system-ui;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  .exploreSearch > div:nth-child(2) form input::placeholder {
+    color: white;
+    opacity: 0.7;
+  }
+  .exploreSearch > div:nth-child(2) button {
+    cursor: pointer;
+    margin: auto 10px;
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .dateTime {
+    width: 80%;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .second > div:nth-child(1) {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .second > div:nth-child(1) a {
+    color: white;
+  }
+  
+  .second > div:nth-child(2) {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+    min-height: 33px;
+    font-size: 14px;
+  }
+  .second > div:nth-child(2) p {
+    margin-right: 10px;
+    color: white;
+  }
+  .second > div:nth-child(2) button {
+    height: 25px;
+    width: 80px;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* CSS part for second part of header. */
+  
+  .headMenu {
+    animation: animationDownN3 0.8s forwards 0s ease-in;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+  }
+  /* .headMenu::after{
+        content: "";
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        z-index: 1;
+        background-color: #f5f5f5;
+    } */
+  
+  .headMenu > div {
+    width: 80%;
+    margin: auto;
+  }
+  .headMenu > div > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+  }
+  .headMenu > div > ul:nth-child(1) {
+    font-weight: bold;
+  }
+  
+  .headMenu > div > ul li a {
+    color: black;
+  }
+  
+  .headMenu > div > ul > li {
+    display: list-item;
+    position: relative;
+    padding: 10px 0;
+    margin: 0 10px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .headMenu > div > ul:nth-child(2) {
+    animation: animationDownN2 0.8s forwards 0s ease-in;
+    z-index: 1;
+    position: relative;
+    padding: 8px;
+    box-shadow: 0 3px 6px 0 rgb(191 191 191 / 16%);
+  }
+  .headMenu > div > ul:nth-child(2) > li {
+    padding: 5px 5px;
+    height: inherit;
+    line-height: 20px;
+    text-align: center;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+  }
+  
+  .active {
+    text-decoration: underline;
+  }
+  
+  .headMenu > div > ul:nth-child(1) a:hover {
+    color: rgb(0, 177, 206);
+  }
+  .headMenu > div > ul:nth-child(2) li:hover {
+    background-color: rgb(0, 177, 206);
+  }
+  
+  .sub {
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .headMenu > div > ul > li:hover .sub {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -50px;
+  }
+  .headMenu > div > ul > li:hover .sub ul {
+    display: block;
+    margin: 10px;
+  }
+  .headMenu > div > ul > li:hover .sub ul li {
+    width: 100px;
+    padding: 10px;
+    border-bottom: 1px dotted black;
+    background-color: transparent;
+    text-align: left;
+  }
+  .headMenu > div > ul > li:hover .sub ul li:last-child {
+    border: none;
+  }
+  .headMenu > div > ul > li:hover .sub ul li:hover {
+    background-color: rgb(0, 177, 206);
+    border: none;
+  }
+  
+  /* CSS Part for Content Section */
+  
+  section{
+      margin-top: 200px;
+      width: 100%;
+      background-color: white;
+      box-sizing: border-box;
+    }
+  #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+    }
+  
+    #leftbox {
+      width: 20%;
+      height: 1250px;
+    }
+  
+    #leftbox1:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  
+    #leftbox2:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  
+    #leftbox3:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  
+    #midbox {
+      width: 50%;
+      margin-left: 25px;
+    }
+  
+    #rightbox {
+      width: 30%;
+      height: 1200px;
+      margin-left: 25px;
+    }
+  
+    #container span {
+      color: blue;
+    }
+  
+    #headings:before,
+    #headings:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 11%;
+      vertical-align: middle;
+    }
+  
+    #headings {
+      font-family: garamond;
+      font-weight: 600;
+      margin-top: 26px;
+    }
+  
+    #headings > h3 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-weight: 630;
+      margin: 8px;
+      padding-top: 5px;
+    }
+  
+    #headings > h3:hover {
+      cursor: pointer;
+    }
+  
+    #container p {
+      color: grey;
+      margin-left: auto;
+      padding-top: 7px;
+      width: 100%;
+      height: auto;
+    }
+  
+    #midheadings:before,
+    #midheadings:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 30.4%;
+      vertical-align: middle;
+    }
+  
+    #midheadings {
+      font-family: garamond;
+      font-weight: 600;
+    }
+  
+    #share {
+      width: 5.2%;
+      position: relative;
+      left: 82%;
+      bottom: 30px;
+    }
+  
+    #bookmark {
+      width: 5.2%;
+      position: relative;
+      left: 85%;
+      bottom: 30px;
+    }
+  
+    #modibox {
+      padding: 8px;
+      width: 100%;
+    }
+  
+    #modibox:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+    }
+  
+    #secondmodi1 {
+      position: relative;
+      width: 25%;
+      bottom: 80px;
+      left: 67%;
+      border-radius: 4px;
+    }
+  
+    #secondmodi {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    #secondmodi:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+    }
+  
+    #adbox {
+      width: 100%;
+      height: 357px;
+      background-color: rgb(210, 209, 209);
+    }
+  
+    #midadbox {
+      width: 100%;
+      height: 357px;
+      background-color: rgb(210, 209, 209);
+    }
+  
+    #rightboximage:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  
+    #rightheadings:before,
+    #rightheadings:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 38.4%;
+      vertical-align: middle;
+    }
+  
+    #rightheadings2:before,
+    #rightheadings2:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 33.4%;
+      vertical-align: middle;
+    }
+  
+    #rightheadings3:before,
+    #rightheadings3:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 30.4%;
+      vertical-align: middle;
+    }
+  
+    #rightheadings4:before,
+    #rightheadings4:after {
+      background-color: rgb(162, 161, 161);
+      content: "";
+      display: inline-block;
+      height: 0.5px;
+      width: 35.4%;
+      vertical-align: middle;
+    }
+  
+    #rightboximage {
+      width: auto;
+      height: auto;
+      padding: 5px;
+    }
+  
+    #rightboximage3 {
+      height: auto;
+      padding: 5px;
+    }
+  
+    #rightboximage4 {
+      height: auto;
+      padding: 5px;
+    }
+  
+    #rightboximage4:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+    }
+  
+    #rightboximage3:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+    }
+  
+    #rightimage1 {
+      width: 100%;
+      border-radius: 7px;
+    }
+  
+    #rightimage2 {
+      width: 30%;
+      margin-left: 70%;
+      position: relative;
+      bottom: 75px;
+      border-radius: 7px;
+    }
+  
+    #container button {
+      margin-left: 37%;
+      border: none;
+      background-color: white;
+      color: teal;
+      padding: 10px;
+      font-size: large;
+      font-weight: 600;
+    }
+  
+    #container button:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  
+    #leftboxbutton {
+      margin-top: 5px;
+      margin-left: 50px;
+      border: none;
+      background-color: white;
+      color: teal;
+      padding: 10px;
+      font-size: large;
+      font-weight: 600;
+    }
+  
+    #shoptags {
+      width: 120%;
+      display: flex;
+      justify-content: space-evenly;
+      font-weight: bold;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      height: 400px;
+      padding-top: 20px;
+    }
+  
+    #bestdeals:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+  
+    #electronics:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+  
+    #fashion:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+  
+    #beauty:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+  
+  /* CSS Part for Footer Section */
+  
+  footer{
+      background-color: #011e29;
+          box-sizing: border-box;
+    width: 100%;
+  }
+  
+  #footers_foot {
+    box-sizing: border-box;
+    background-color: #00131a;
+    width: 100%;
+    padding: 20px 0 0;
+    height: auto;
+  }
+  .contains {
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    height: auto;
+  }
+  .footers_foot_container {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    /* height: auto; */
+    padding: 24px;
+  }
+  .foot_about {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 50px);
+  }
+  /* .about1 {
+    border: 1px solid green;
+    color: white;
+  padding-left:20px;
+  font-weight: 400;
+  font-family: "Lato",sans-serif;
+  } */
+  
+  .minticon {
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    border-top: 1px solid #304759;
+    border-bottom: 1px solid #304759;
+    height: auto;
+    padding-top: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    margin-top: -20px;
+  }
+  
+  .footerlogo {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+  }
+  .downloadapp {
+    text-align: right;
+  }
+  .subscribe {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-bottom: 24px;
+  
+    width: 100%;
+  }
+  .label1 {
+    color: white;
+    font-weight: bold;
+  }
+  .htlogo > img {
+    width: 404px;
+  }
+  .subscribeinput {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .HTHUNTSELECT {
+    width: 260px;
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .hthunt1 {
+    color: #424242;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #email {
+    width: 330px;
+    margin-right: 15px;
+    padding-left: 10px;
+    border-radius: 4px;
+  }
+  #btn {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    width: 150px;
+  }
+  .socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #socialicon {
+    display: flex;
+    justify-content: space-between;
+  
+    width: 50%;
+  
+    height: 40px;
+  }
+  #socialicon > img {
+    width: 50px;
+  }
+  #footer_menu {
+    border-top: 1px solid #304759;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  }
+  
+  #footer_menu li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  ul li.heading a {
+    font-weight: 700;
+    color: white;
+  }
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  .end {
+    width: 150px;
+    color: #c2c2c2;
+    font: 300;
+    margin: auto;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+  .about1 a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+  }
+  

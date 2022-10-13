@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="e-paper.css">
+   
+</head>
+<body>
+    <div class="friest">
+        <div class="ads">
+            <h2>Advertisement</h2>
+          </div>
+        </div>
+
+</div>
+        <div class="nav">
+            <div class="h5">
+
+                <h5>Saturday, Jun 18, 2022 <span class="s">|</span> Delhi</h5>
+            </div>
+            <div class="header1">
+                <img src="https://epaper.hindustantimes.com//Images/logo/ht-crest.svg" alt="">
+           <img src="https://epaper.hindustantimes.com//Images/logo/logo.png" alt="">
+            </div>
+        <div class="sub">
+            <a href="#">Subcribe Now</a>
+            <img src="https://epaper.hindustantimes.com//Images/icons/user.svg">
+        </div>
+        </div>
+  <div>
+    <div class="caruser">
+        <img src="https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/1_01/3f6888e9_01_mr.jpg" alt="">
+        <button><</button>
+        <button>></button>
+    </div>
+        <div class="publication">
+            <div id="heading">
+                <h3>other publications</h3>
+            </div>
+            <div class="pub-box display-flex">
+                <div>
+                     <a href="https://epaper.livemint.com/Home/ArticleView?utm_source=lhepaper&amp;utm_medium=otherpublication" target="_blank">
+                        <img src="https://epaper.hindustantimes.com//Images/logo/mint.svg">
+                    </a>
+                </div>
+                   
+               <div >
+                 <a href="https://epaper.livehindustan.com/Home/ArticleView?utm_source=lhepaper&amp;utm_medium=otherpublication" target="_blank">
+                        <img src="https://epaper.hindustantimes.com//Images/logo/hindu.png">
+                    </a>
+               </div>
+                                                 
+            </div>
+        </div>
+        <div class="food">
+            <p class="ptag">Disclaimer: The contents of this website is the copyright of HT
+                 Digital Streams Limited and any downloadable version<span id="dots">...</span> <span id="more">thereof, including but not limited to electronic
+            or digital version of newspaper (e-paper) in any format, is intended
+     for personal consumption only. Dissemination, distribution, circulation and/ 
+         or publication of any content or e-paper (pdf or otherwise) through any mode 
+         and/or on any social media platform without prior authorization/ permission/
+     license, is strictly prohibited.
+    </span><button onclick="myFunction()" id="readbtn">Read more</button></p>
+        </div>
+  </div>
+   
+    
+</body>
+</html>
+<script>
+    let img=document.querySelector("img");
+    let btn=document.querySelectorAll("button");
+    let imgNum=0;
+
+    let imgArr=[
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/1_01/3f6888e9_01_mr.jpg",
+       "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/1_02/d70b7a8f_02_mr.jpg",
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/2_03/7db069b0_03_mr.jpg",
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/2_04/91469cb1_04_mr.jpg",
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/5_01/7638b2f0_01_mr.jpg",
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/5_03/730408f9_03_mr.jpg",
+        "https://epsfs.hindustantimes.com/HT/2022/06/17/HT_DELH/HT_DELH/5_03/730408f9_03_mr.jpg",
+
+    ]
+    let buttons=document.querySelectorAll("button")
+    buttons[0].addEventListener("click",function(){
+
+        if(imgNum===0){
+            imgNum=imgArr.length-1
+
+        }else{
+            imgNum--
+        }
+        img.src=imgArr[imgNum];
+    })
+    buttons[1].addEventListener("click",function(){
+    if(imgNum===imgArr.length-1){
+            imgNum=0
+
+        }else{
+            imgNum++
+        }
+        img.src=imgArr[imgNum];
+    })
+
+</script>
