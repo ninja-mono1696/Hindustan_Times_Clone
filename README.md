@@ -3,7 +3,7 @@ Hindustan Times is an Indian English-language daily newspaper based in Delhi. It
 
 
 
-https://tata1mgcloned.netlify.app/feature.html
+https://unique-kashata-b37791.netlify.app/
 
 # Tech Stack used
 
